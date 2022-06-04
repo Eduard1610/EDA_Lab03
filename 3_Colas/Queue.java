@@ -10,6 +10,16 @@ public class Queue<E> {
     this.size = n;
   }
   public boolean offer(E e){
+    if(numElementos == size - 1)
+      return false;
+    Node <E> aux = new Node <E> (e, null);
+    if(isEmpty())
+      this.root = aux;
+    else
+      this.last.setNextNode(aux);
+    this.last = aux;
+    numElementos++;
+    return true;
   }
   public boolean add(E e){
   }
@@ -20,5 +30,9 @@ public class Queue<E> {
   public E poll(){
   }
   public E remove(){
+  }
+  //Metodos auxiliares
+  public boolean isEmpty(){
+    return this.root == null;
   }
 }
