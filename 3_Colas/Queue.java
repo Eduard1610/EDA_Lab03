@@ -60,4 +60,9 @@ public class Queue<E> {
   public boolean isEmpty(){
     return this.root == null;
   }
+  public E getLast(){
+    if(this.last == null)
+      return null;
+    return this.last.getData();
+  }
 }
