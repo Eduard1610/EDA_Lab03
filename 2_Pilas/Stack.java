@@ -16,6 +16,20 @@ public class Stack<T> {
 		return this.root == null;
 	}
 
+	public T pop() throws EmptyStackException { 
+		if (empty())
+			throw new EmptyStackException("Stack is empty"); // Si la pila está vacía arroja una excepción
+		T item = this.root.getData(); // Guardamos el último elemento en haber sido colocado
+		this.root = this.root.getNext(); // Quitamos el último elemento
+		return item;
+	}
+
+	public T peek() throws EmptyStackException { // Devuelve el root sin borrarlo
+		if (empty())
+			throw new EmptyStackException("Stack is empty"); // Si la pila está vacía arroja una excepción
+		return this.root.getData(); // Retornamos el último elemento en haber sido colocado
+	}
+
 	public String toString() {
 		String str = "";
 		Node<T> aux = this.root;

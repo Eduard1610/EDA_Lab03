@@ -31,5 +31,18 @@ public class Test {
 		// La pila ya no está vacía
 		System.out.println("\nUsando empty: ¿La pila está vacía? : " + stack.empty() + "\n");
 
+		// Usamos try-catch ya que los métodos POP y PEEK estan implementados con excepciones
+		try {
+			// Pop: Retorna y quita el último elemento agregado
+			System.out.println("USANDO POP\n" + stack.pop());
+			System.out.println(stack);
+			
+			// Peek: Retorna el último elemento agregado sin quitarlo
+			System.out.println("\nUSANDO PEEK\n" + stack.peek());
+			System.out.println(stack);
+		} catch (EmptyStackException e) { // Por si la lista está vacía
+			System.out.println(e.getMessage());
+		}
+
 	}
 }
