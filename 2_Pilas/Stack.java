@@ -1,5 +1,7 @@
+import java.util.Vector;
 
-public class Stack<T> {
+//Extendemos de vector ya que cuenta con métodos útiles para una pila
+public class Stack<T> extends Vector<T> {
 	//root representa nuestro tope, el elemento de más arriba
 	private Node<T> root; 
 	
