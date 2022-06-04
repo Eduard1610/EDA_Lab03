@@ -51,7 +51,10 @@ public class Queue<E> {
       this.root = this.root.nextNode();
     return cabeza.getData();
   }
-  public E remove(){
+  public E remove() throws EmptyQueueException{
+    if(this.isEmpty())
+      throw new EmptyQueueException("La cola esta vacia");
+    return this.poll();
   }
   //Metodos auxiliares
   public boolean isEmpty(){
