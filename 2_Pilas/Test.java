@@ -44,5 +44,10 @@ public class Test {
 			System.out.println(e.getMessage());
 		}
 
+		// Search: Nos regresa la posición de un elemento contando de 1 
+		//(empezando por el último agregado) de no encontrar retorna -1
+		System.out.println("\n¿Está el número 17? - Retorna posición: " + stack.search(17));
+		System.out.println("\n¿Está el número 578? - Retorna posición (-1 si no encontró): " + stack.search(578));
+
 	}
 }

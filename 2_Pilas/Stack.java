@@ -30,6 +30,18 @@ public class Stack<T> {
 		return this.root.getData(); // Retornamos el último elemento en haber sido colocado
 	}
 
+	public int search(T x) {
+		int pos = 1; // El método search cuenta los elementos desde 1 y no desde 0
+		Node<T> aux = this.root;
+		while (aux != null) {
+			if (aux.getData().equals(x)) //Si encuentra al elemento retorna su posición
+				return pos;
+			aux = aux.getNext(); // Saltamos a la siguiente posición
+			pos++;
+		}
+		return -1;
+	}
+
 	public String toString() {
 		String str = "";
 		Node<T> aux = this.root;
