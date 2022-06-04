@@ -6,6 +6,9 @@ public class Test {
 		// LA PILA IMPLEMENTADA PUEDE SER USADA INCLUSO CON CLASES QUE NO SEAN PREDETERMINADAS DE JAVA
 		Stack<Integer> stack = new Stack<Integer>();
 
+		// Empty: Devuelve un booleano si stack está vacío
+		System.out.println("Usando empty: ¿La pila está vacía? : " + stack.empty() + "\n");
+
 		// PUSH: AGREGAMOS ELEMENTOS A NUESTRA PILA
 		// Los últimos elementos en agregarse serán los primeros
 		stack.push(23);
@@ -25,6 +28,8 @@ public class Test {
 		stack.push(14);
 		System.out.println(stack);
 
+		// La pila ya no está vacía
+		System.out.println("\nUsando empty: ¿La pila está vacía? : " + stack.empty() + "\n");
 
 	}
 }
