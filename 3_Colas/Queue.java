@@ -28,8 +28,15 @@ public class Queue<E> {
       throw new FullQueueException("Actualmente no hay espacio disponible");
   }
   public E peek(){
+    if(isEmpty())
+      return null;
+    return this.root.getData();
   }
-  public E element(){
+  public E element() throws EmptyQueueException{
+    if(this.peek() != null)
+      return this.root.getData();
+    else
+      throw new EmptyQueueException("La cola esta vacia");
   }
   public E poll(){
   }
