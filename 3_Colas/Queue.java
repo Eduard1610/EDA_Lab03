@@ -39,6 +39,17 @@ public class Queue<E> {
       throw new EmptyQueueException("La cola esta vacia");
   }
   public E poll(){
+    if(this.isEmpty())
+      return null;
+    Node <E> cabeza = this.root;
+    numElementos--;
+    if(this.root.nextNode() == null){
+      this.root = null;
+      this.last = null;
+    }
+    else
+      this.root = this.root.nextNode();
+    return cabeza.getData();
   }
   public E remove(){
   }
