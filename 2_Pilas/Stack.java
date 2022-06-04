@@ -12,4 +12,18 @@ public class Stack<T> {
 		this.root = new Node<T>(x,this.root); 
 	}
 
+	public boolean empty () { // Si no hay root la pila está vacía
+		return this.root == null;
+	}
+
+	public String toString() {
+		String str = "";
+		Node<T> aux = this.root;
+		while (aux != null) {
+			str += aux.getData() + ", ";
+			aux = aux.getNext();
+		}		
+		return str;
+	}
+
 }
