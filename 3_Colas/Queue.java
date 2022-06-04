@@ -21,7 +21,11 @@ public class Queue<E> {
     numElementos++;
     return true;
   }
-  public boolean add(E e){
+  public boolean add(E e) throws FullQueueException{
+    if(offer(e))
+      return true;
+    else
+      throw new FullQueueException("Actualmente no hay espacio disponible");
   }
   public E peek(){
   }
