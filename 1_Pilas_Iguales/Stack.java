@@ -43,7 +43,7 @@ public class Stack<T> extends Vector<T> {
 	}
 
 	public int equalStacks(Stack h1, Stack h2, Stack h3) {
-		if(h1.size()==h2.size()==h3.size()){
+		if(h1.size()==h2.size() && h2.size()==h3.size()){
 			return h1.size();
 		} else return -1;
 	}
