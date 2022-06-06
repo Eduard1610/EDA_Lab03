@@ -20,9 +20,9 @@ public class Test{
         h3.push(1);
         h3.push(1);
 
-        System.out.println("H1 contiene: "+h1);
-        System.out.println("H2 contiene: "+h2);
-        System.out.println("H3 contiene: "+h3);
+        System.out.println("H1 contiene "+h1.size()+" elementos" +h1);
+        System.out.println("H2 contiene "+h2.size()+" elementos" +h2);
+        System.out.println("H3 contiene "+h3.size()+" elementos" +h3);
     }
 
  }
